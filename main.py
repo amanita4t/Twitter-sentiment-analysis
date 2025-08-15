@@ -32,17 +32,3 @@ df.index += 1  # start index from 1
 df.to_csv("tweets.csv", index_label="Index")
 
 tweets_df = load_and_clean_tweets("tweets.csv", save_cleaned=True)
-
-plt.figure(figsize=(8, 6))
-plt.scatter(
-    df['Polarity'],
-    df['Subjectivity'],
-    alpha=0.5,
-    color='blue'
-)
-plt.title("Polarity vs. Subjectivity", fontsize=14)
-plt.xlabel("Polarity", fontsize=12)
-plt.ylabel("Subjectivity", fontsize=12)
-plt.grid(True, linestyle='--', alpha=0.7)
-plt.tight_layout()
-plt.show()
